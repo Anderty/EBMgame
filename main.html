@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ЕБМ clicker</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+	<div id="page">
+		<div onclick="mineralClick()" id="ebm-crystal" type="button">
+				<svg version="1.1" id="EBMLarge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="446px" height="466px" viewBox="0 0 446 466" enable-background="new 0 0 446 466" xml:space="preserve">
+				<polygon fill="#0B1728" points="246.166,7.999 299.667,99.5 343.5,97.668 343.667,128.61 439.042,140.542 375.875,237.001 
+					425.5,328.334 340.969,334 337,357 288,357 217.25,459.688 175.333,370.251 155.625,369.25 134,323.063 12.333,314.032 
+					95.333,196.017 57.167,132.508 90.667,132.005 82.75,91.377 173.833,100.334 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="4" stroke-miterlimit="10" points="133.969,322.563 177.917,324.751 
+					343,333.25 177.917,324.751 246,8.333 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="192.083,77.833 223.184,114.373 
+					301.75,100.125 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="91.083,132.001 177.917,324.751 
+					175.5,370.156 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="12.333" y1="314.001" x2="343.667" y2="97.668"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="84,92.334 207.673,186.461 
+					298.333,246.334 424,327.001 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="343.667" y1="127.334" x2="217.667" y2="458.667"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="241.757,395.32 177.917,324.751 
+					298.397,246.376 351.334,205.834 438.333,141.667 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="266.746" y1="329.607" x2="288" y2="356.334"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="343.182,128.61 351.334,205.834 376,238.5 
+					"/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="136.387" y1="233.005" x2="95.708" y2="195.688"/>
+				<polygon id="fill" fill="rgba(255,255,255,0)" stroke="#273D6D" stroke-width="5" stroke-miterlimit="10" points="246.166,7.999 299.667,99.5 343.5,97.668 
+					343.667,128.61 439.042,140.542 375.875,237.001 425.5,328.334 340.969,333.75 337,356.5 288,356.5 217.25,459.438 175.333,370.126 
+					155.625,369.188 134,323.031 12.333,314.017 95.333,196.009 57.167,132.504 90.667,132.003 82.75,91.376 173.833,100.334 "/>
+				</svg>
+		</div>
+		<div class="info">
+			<h3>
+				Минералы: <span id="minerals">0</span>
+			</h3>
+			<!--<h3>Полимеры: <span id="polymers" class="badge">0</span></h3>-->
+		</div>
+
+		<ul class="upgrades">
+			<span class="infoLabel">Апгрейды</span>
+			<li onclick="buyCursor()">
+			Курсоров: <span id="cursors" class="badge">0</span>
+			<br />
+			Стоймость Курсора: <span id="cursorCost" class="badge">10</span>
+			</li>
+		</ul>
+
+		<!--<div id="pprogress">
+			<div id="pp1" class="pp"></div>
+			<div id="pp2" class="pp"></div>
+			<div id="pp3" class="pp"></div>
+			<div id="pp4" class="pp"></div>
+			<div id="pp5" class="pp"></div>
+			<div id="pp6" class="pp"></div>
+			<div id="pp7" class="pp"></div>
+			<div id="pp8" class="pp"></div>
+			<div id="pp9" class="pp"></div>
+		</div>-->
+			
+		<footer>
+			<span id="version" class="link" onclick="">0.0.1 Open-Alpha</span>
+			<span id="delete" onclick="deleteSave()" class="link">Удалить Сохранение</span>
+		</footer>
+	</div>
+	</body>
+</html>
