@@ -17,54 +17,95 @@
 		</script>
 	</head>
 	<body>
+	<!--<div id="swipe"></div>-->
+		<div id="menu">
+			<ul>
+				<li onclick="buyCursor()">
+				<i>
+					<svg version="1.1" id="cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+					<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="15.151,7.382 35.613,26.735 27.389,27.199 
+						33.347,40.982 27.056,43.677 21.129,29.943 15.171,35.581 "/>
+					</svg>
+				</i>
+				<p>Курсоров:<span id="cursors">0</span></p>
+				<br />
+				<p class="costInfo">Стоимость:<span id="cursorCost">10</span></p>
+				</li>
+			</ul>
+		</div>
 	<div id="page">
+		<header>
+			<a href="#" id="toggle-menu">Апгрейды</a>
+		</header>
 		<div onclick="mineralClick()" id="ebm-crystal" type="button">
-				<svg version="1.1" id="EBMLarge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 width="446px" height="466px" viewBox="0 0 446 466" enable-background="new 0 0 446 466" xml:space="preserve">
-				<polygon fill="#0B1728" points="246.166,7.999 299.667,99.5 343.5,97.668 343.667,128.61 439.042,140.542 375.875,237.001 
-					425.5,328.334 340.969,334 337,357 288,357 217.25,459.688 175.333,370.251 155.625,369.25 134,323.063 12.333,314.032 
-					95.333,196.017 57.167,132.508 90.667,132.005 82.75,91.377 173.833,100.334 "/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="4" stroke-miterlimit="10" points="133.969,322.563 177.917,324.751 
-					343,333.25 177.917,324.751 246,8.333 "/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="192.083,77.833 223.184,114.373 
-					301.75,100.125 "/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="91.083,132.001 177.917,324.751 
-					175.5,370.156 "/>
-				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="12.333" y1="314.001" x2="343.667" y2="97.668"/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="84,92.334 207.673,186.461 
-					298.333,246.334 424,327.001 "/>
-				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="343.667" y1="127.334" x2="217.667" y2="458.667"/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="241.757,395.32 177.917,324.751 
-					298.397,246.376 351.334,205.834 438.333,141.667 "/>
-				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="266.746" y1="329.607" x2="288" y2="356.334"/>
-				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="343.182,128.61 351.334,205.834 376,238.5 
-					"/>
-				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="136.387" y1="233.005" x2="95.708" y2="195.688"/>
-				<polygon id="fill" fill="rgba(255,255,255,0)" stroke="#273D6D" stroke-width="5" stroke-miterlimit="10" points="246.166,7.999 299.667,99.5 343.5,97.668 
-					343.667,128.61 439.042,140.542 375.875,237.001 425.5,328.334 340.969,333.75 337,356.5 288,356.5 217.25,459.438 175.333,370.126 
-					155.625,369.188 134,323.031 12.333,314.017 95.333,196.009 57.167,132.504 90.667,132.003 82.75,91.376 173.833,100.334 "/>
-				</svg>
+			<svg version="1.1" id="ebm-crystal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="440px" height="440px" viewBox="0 0 440 440" enable-background="new 0 0 440 440" xml:space="preserve">
+				<polygon fill="#0B1728" points="238.809,8.318 288.955,94.082 330.041,92.365 330.197,121.368 419.594,132.551 360.387,222.965 
+					406.9,308.572 327.669,314.162 323.949,336 278.02,336 211.705,431.971 172.416,348 153.943,346.993 133.674,303.666 
+					19.635,295.184 97.432,184.558 61.657,125.025 93.057,124.553 85.637,86.471 171.011,94.865 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="4" stroke-miterlimit="10" points="133.645,303.162 174.838,305.213 
+					329.572,313.18 174.838,305.213 238.653,8.631 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="188.117,73.774 217.268,108.023 
+					290.908,94.669 "/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="93.448,124.547 174.838,305.213 
+					172.572,347.772 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="19.635" y1="295.137" x2="330.197" y2="92.365"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="86.809,87.366 202.729,175.593 
+					287.705,231.713 405.494,307.322 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="330.197" y1="120.172" x2="212.096" y2="430.734"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="234.676,371.359 174.838,305.213 
+					287.766,231.752 337.385,193.752 418.93,133.607 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="258.099" y1="309.766" x2="278.02" y2="334.816"/>
+				<polyline fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" points="329.742,121.368 337.385,193.752 
+					360.504,224.369 "/>
+				<line fill="none" stroke="#273D6D" stroke-width="3" stroke-miterlimit="10" x1="135.911" y1="219.219" x2="97.783" y2="184.24"/>
+				<polygon id="fill" fill="rgba(255,255,255,0)" stroke="#273D6D" stroke-width="5" stroke-miterlimit="10" points="238.809,8.318 288.955,94.082 
+					330.041,92.365 330.197,121.368 419.594,132.551 360.387,222.965 406.9,308.572 327.669,313.912 323.949,335.5 278.02,335.5 
+					211.705,431.721 172.416,347.877 153.943,346.93 133.674,303.635 19.635,295.168 97.432,184.551 61.657,125.022 93.057,124.55 
+					85.637,86.47 171.011,94.865 "/>
+			</svg>
 		</div>
 		<div class="info">
-			<h3>
-				Минералы: <span id="minerals">0</span>
-			</h3>
+			<h3>Минералы: <span id="minerals">0</span></h3>
 			<h5>Полимеры: <span id="polymers" >0</span></h5>
 		</div>
-
-		<ul class="upgrades">
-			<span class="infoLabel">Апгрейды</span>
-			<li onclick="buyCursor()">
-			Курсоров: <span id="cursors">0</span>
-			<br />
-			Стоимость Курсора: <span id="cursorCost">10</span>
-			</li>
-		</ul>
 			
 		<footer>
-			<span id="version" class="link" onclick="">0.0.2 Open-Alpha</span>
+			<span id="version" class="link" onclick="">0.0.3 Open-Alpha</span>
 			<span id="delete" onclick="deleteSave()" class="link">Удалить Сохранение</span>
 		</footer>
 	</div>
 	</body>
+	<script type="text/javascript">
+		( function( $ ) {
+
+		$( '#toggle-menu' ).on( 'touchstart click', function(e) {
+		    e.preventDefault();
+		    console.log('clicked');
+
+		    var $body = $( 'body' ),
+		        $page = $( '#page' ),
+		        $menu = $( '#menu' ),
+
+		        transitionEnd = 'transitionend webkitTransitionEnd otransitionend MSTransitionEnd';
+
+		    $body.addClass( 'animating' );
+
+		    if ( $body.hasClass( 'menu-visible' ) ) {
+		     $body.addClass( 'right' );
+		    } else {
+		     $body.addClass( 'left' );
+		    }
+
+		    $page.on( transitionEnd, function() {
+		     $body
+		      .removeClass( 'animating left right' )
+		      .toggleClass( 'menu-visible' );
+
+		     $page.off( transitionEnd );
+		    } );
+		   } );
+		  } )( jQuery );
+	</script>
 </html>

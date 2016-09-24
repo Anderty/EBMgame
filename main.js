@@ -2,6 +2,7 @@
 /*				Variables				*/
 
 var entities = [
+	"version",
 	"clicks",
 	"minerals",
 	"cursors",
@@ -18,6 +19,7 @@ var displayData = [
 ];
 
 var data = {
+	"version" : "0.0.2",
 	"clicks" : 0,
 	"minerals" : 0,
 	"cursors" : 0,
@@ -31,20 +33,20 @@ var data = {
 function mineralClick(){
 	data["minerals"] = data["minerals"] + data["cursors"] + 1;
 	data["clicks"] += 1;
-	if (data["polymersProgress"] >= 9 + data["polymers"]) {
+	if (data["polymersProgress"] >= data["polymers"]) {
 		data["polymers"] += 1;
-		data["polymersProgress"] = 0;
+		data["polymersProgress"] = data["polymersProgress"] - data["polymers"];
 		document.getElementById("polymers").innerHTML = data["polymers"];
-		//console.log("Polymer Synthesized");
+		console.log("Polymer Synthesized");
 	} else {
-		data["polymersProgress"] += 1;
+		data["polymersProgress"] += 1 + data["cursors"];
 	};
 	document.getElementById("minerals").innerHTML = data["minerals"];
-	//console.log(data["polymersProgress"]);
+	console.log(data["polymersProgress"]);
 };
 
 function autoClick(){
-	data["minerals"] = data["minerals"] + data["cursors"];
+	data["minerals"] = Math.round(data["minerals"] + data["cursors"]*data["polymers"]);
 	document.getElementById("minerals").innerHTML = data["minerals"];
 };
 

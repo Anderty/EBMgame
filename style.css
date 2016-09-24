@@ -444,7 +444,7 @@ tr:hover td a:hover{
 }
 
 del {
-	color: #333;
+	color: #999;
 }
 
 ins {
@@ -462,16 +462,31 @@ hr {
 
 /******************************* ^ Reset ^ ***********************************/
 
-html {
+html, body {
     height: 100%;
     margin: 0;
 	padding: 0;
+	background: #999;
 }
-body {
-	position: relative;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
+footer{
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-width: 100%;
+	background: rgba(0,0,0,0.3);
+	font-size: 12px;
+	padding: 2px;
+	z-index: 10;	
+}
+
+#page{
+	position: relative; /* Set the position property so z-index will apply */
+	z-index: 20; /* Make sure this is higher than #menu */
+	height: 100%;
+	padding: 0 0 0 0;
     color: rgb(200,200,200);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -480,16 +495,100 @@ body {
 	background: -o-radial-gradient(#11192D, #04060C); /* For Opera 11.6 to 12.0 */
 	background: -moz-radial-gradient(#11192D, #04060C); /* For Firefox 3.6 to 15 */
 	background: radial-gradient(#11192D, #04060C); /* Standard syntax */
+	transform: translate3d( 0, 0, 0 ); /* X, Y, Z */
+	-webkit-transform: translate3d( 0, 0, 0 );
 }
+
+#toggle-menu {
+	position: absolute;
+	cursor: pointer;
+	display: none;
+	z-index: 500;
+	top: 10px;
+	right: 10px;
+}
+
+#swipe{
+	position: absolute;
+	z-index: 99998;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#menu ul{
+	padding: 0;
+	margin: 0;
+}
+
+#menu li {
+	cursor: pointer;
+	position: relative;
+	background: #999;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	display: block;
+	-webkit-transition: background 0.2s, color 0.2s; /* Safari */
+	transition: background 0.2s, color 0.2s;
+	padding: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#menu li p{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	opacity: 1;
+	padding: 6px 50px 6px 8px;
+	max-width: 150px;
+	z-index: 50;
+	-webkit-transition: background 0.2s, color 0.2s; /* Safari */
+	transition: background 0.2s, color 0.2s;
+}
+
+#menu li i{
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	z-index: 100;
+	max-width: 50px;
+	background: #999; /* Same as background */
+	-webkit-transition: background 0.2s, color 0.2s; /* Safari */
+	transition: background 0.2s, color 0.2s;
+}
+
+#menu li:hover, #menu li:hover i{
+	background: #888;
+}
+
+#menu li:active, #menu li:active i{
+	background: #777;
+}
+
+.costInfo{
+	font-size: 12px;
+	margin: 3px 0;
+}
+
+/******************************* ^ Page ^ ***********************************/
 
 #ebm-crystal{
 	position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -223px;
-    margin-left: -223px;
-    width: 446px;
-    height: 446px
+    margin-top: -220px;
+    margin-left: -220px;
+    width: 440px;
+    z-index: 10;
+    height: 440px
 }
 
 #ebm-crystal #fill{
@@ -504,73 +603,33 @@ body {
 }
 #ebm-crystal #fill:active{
 	fill: rgba(255,255,255,0.1);
-	stroke: #3c507b;
-}
-
-footer{
-	position: absolute;
-	display: block;		
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	min-width: 100%;
-	background: rgba(0,0,0,0.3);
-	font-size: 12px;
-	padding: 2px;
-}
-
-#delete{
-	float: right;
+	stroke: #3c507b
 }
 
 .link{
 	cursor: pointer;
 	-webkit-transition: color 0.2s; /* Safari */
 	transition: color 0.2s;
-	color: rgb(230,230,230);
+	color: rgb(230,230,230)
 }
 
 .link:hover{
-	color: rgb(200,200,200);
+	color: rgb(200,200,200)
 }
 
 .link:active{
-	color: rgb(255,255,255);
+	color: rgb(255,255,255)
 }
 
 .info{
+	cursor: default;
 	position: relative;
 	top: 25px;
 	width: 100%;
 	padding: 15px;
 	background: rgba(0,0,0,0.5);
 	text-align: center;
-}
-
-.info h1, .info h2, .info h3, .info h4, .info h5, .info h6{
-	color: rgb(200,200,200);
-}
-
-.button{
-
-}
-
-.upgrades{
-	position: relative;
-	left: 25px;
-	top: 50px;
-	max-width: 250px;
-	padding: 0;
-}
-
-.upgrades li{
-	cursor: pointer;
-	background: rgba(0,0,0,0.5);
-	width: 100%;
-	display: block;
-	-webkit-transition: color 0.2s; /* Safari */
-	transition: color 0.2s;
-	padding: 15px;
+	z-index: 15,
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -580,16 +639,140 @@ footer{
 	user-select: none;
 }
 
-.upgrades li:hover{
-	background: rgba(0,0,0,0.7);
+.info h1, .info h2, .info h3, .info h4, .info h5, .info h6{
+	color: rgb(200,200,200);
 }
 
-.upgrades li:active{
-	background: rgba(0,0,0,1);
+/******************************* ^ Stuff ^ ***********************************/
+
+@media only screen and (min-width: 768px) {
+	#menu {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 50px;
+		min-height: 100%;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background: #999;
+		z-index: 99998;
+		transition: width .25s ease-in-out;
+		-webkit-transition: -webkit-width .25s ease-in-out;
+	}
+
+	#menu li p{
+		opacity: 0;
+		transition: opacity .25s ease-out;
+		-webkit-transition: -webkit-opacity .25s ease-out;
+	}
+
+	#menu:hover{
+		width: 240px;
+	}
+
+	#menu:hover li p{
+		opacity: 1;
+	}
 }
 
-.infoLabel{
-	position: relative;
-	top: -0.2em;
-	left: 0.2em
+@media only screen and (max-width: 768px) {
+
+	#page{
+		padding: 0;
+	}
+
+	#swipe{
+		display: none;
+	}
+
+	#toggle-menu {
+		display: block;
+	}
+
+	#ebm-crystal{
+	    margin-top: -110px;
+	    margin-left: -110px;
+	    width: 220px;
+	    height: 220px
+	}
+
+	#menu {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 240px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background: #999;
+		z-index: 10;
+	}
+
+	.animating #menu, .menu-visible #menu {
+	  display: block;
+	}
+
+	.animating #page {
+	  transition: transform .25s ease-in-out;
+	  -webkit-transition: -webkit-transform .25s ease-in-out;
+	}
+
+	.animating.left #page {
+	  transform: translate3d( -240px, 0, 0 );
+	  -webkit-transform: translate3d( -240px, 0, 0 );
+	}
+
+	.animating.right #page {
+	  transform: translate3d( 240px, 0, 0 );
+	  -webkit-transform: translate3d( 240px, 0, 0 );
+	}
+
+	.menu-visible #page {
+	  right: 240px;
+	}
+
+	#page, #menu {
+	  -webkit-backface-visibility: hidden;
+	  -webkit-perspective: 1000;
+	}
+
+	h1 {
+	font-size: 28px;
+	margin: 6px 0;
+	}
+
+	h2 {
+		font-size: 20px;
+		margin: 5px 0;
+	}
+
+	h3 {
+		font-size: 18px;
+		margin: 4px 0;
+	}
+
+	h4 {
+		font-size: 16px;
+		margin: 3px 0;
+	}
+
+	h5 {
+		font-size: 14px;
+		margin: 2px 0;
+	}
+
+	h6 {
+		font-size: 12px;
+		margin: 1px 0;
+	}
+	p {
+	font-size: 14px;
+	line-height: 1.1;
+	margin: 0 0 20px;
+	}
 }
+
+/******************************* ^ Media ^ ***********************************/
