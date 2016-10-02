@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>ЕБМ clicker</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="main.js"></script>
@@ -59,9 +60,9 @@
 					<i>
 
 					</i>
-					<p>Инженеров: <span id="scv">0</span></p>
+					<p>Инженеров: <span id="engineer">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="scvCost">160</span></p>
+					<p class="costInfo">Стоимость: <span id="engineerCost">160</span></p>
 				</li>
 				<li onclick="">
 					<i>
@@ -81,41 +82,41 @@
 					<i>
 
 					</i>
-					<p>Цехи: <span id="freighter">0</span></p>
+					<p>Цехи: <span id="factory">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="freighterCost">1280</span></p>
+					<p class="costInfo">Стоимость: <span id="factoryCost">1280</span></p>
 				</li>
 				<li onclick="">
 					<i>
 
 					</i>
-					<p>Косм. Корабли: <span id="factory">0</span></p>
+					<p>Косм. Корабли: <span id="spaces">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="factoryCost">2560</span></p>
+					<p class="costInfo">Стоимость: <span id="spacesCost">2560</span></p>
 				</li>
 				<li onclick="">
 					<i>
 
 					</i>
-					<p>Косм. Станции: <span id="rescollector">0</span></p>
+					<p>Косм. Станции: <span id="spacest">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="rescollectorCost">6120</span></p>
+					<p class="costInfo">Стоимость: <span id="spacestCost">5120</span></p>
 				</li>
 				<li onclick="">
 					<i>
 
 					</i>
-					<p>Дайсон Сферы: <span id="mrefinery">0</span></p>
+					<p>Дайсон Сферы: <span id="dyson">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="mrefineryCost">12240</span></p>
+					<p class="costInfo">Стоимость: <span id="dysonCost">10240</span></p>
 				</li>
 				<li onclick="">
 					<i>
 
 					</i>
-					<p>Преоброзовтели Материи: <span id="deathstar">0</span></p>
+					<p>Преобразователи: <span id="converter">0</span></p>
 					<br />
-					<p class="costInfo">Стоимость: <span id="deathstarCost">24480</span></p>
+					<p class="costInfo">Стоимость: <span id="converterCost">20480</span></p>
 				</li>
 			</ul>
 		</div>
@@ -164,7 +165,7 @@
 		</div>
 			
 		<footer>
-			<span id="version" class="link" onclick="">0.0.3 Open-Alpha</span>
+			<span id="version" class="link" onclick="">0.0.5 Open-Alpha</span>
 			<span id="delete" onclick="deleteSave()" class="link">Удалить Сохранение</span>
 		</footer>
 	</div>
