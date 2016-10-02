@@ -482,7 +482,7 @@ footer{
 	z-index: 10;	
 }
 
-#page{
+#page {
 	position: relative; /* Set the position property so z-index will apply */
 	z-index: 20; /* Make sure this is higher than #menu */
 	height: 100%;
@@ -556,8 +556,8 @@ footer{
 	position: absolute;
 	left: 0;
 	opacity: 1;
-	padding: 6px 50px 6px 8px;
-	max-width: 150px;
+	padding: 6px 8px 6px 8px;
+	width: 190px;
 	z-index: 50;
 	-webkit-transition: background 0.2s, color 0.2s; /* Safari */
 	transition: background 0.2s, color 0.2s;
@@ -568,7 +568,9 @@ footer{
 	display: inline-block;
 	right: 0;
 	z-index: 100;
-	max-width: 50px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
 	background: #999; /* Same as background */
 	-webkit-transition: background 0.2s, color 0.2s; /* Safari */
 	transition: background 0.2s, color 0.2s;
@@ -654,7 +656,7 @@ footer{
 
 /******************************* ^ Stuff ^ ***********************************/
 
-@media only screen and (min-width: 768px) {  /* Bigger Screen */
+@media only screen and (min-width: 620px) {  /* Bigger Screen */
 	#menu {
 		display: block;
 		position: fixed;
@@ -667,17 +669,17 @@ footer{
 		list-style: none;
 		background: #999;
 		z-index: 99998;
-		transition: width .25s ease-in-out;
-		-webkit-transition: -webkit-width .25s ease-in-out;
+		-webkit-transition: -webkit-width 0.2s ease-in-out;
+		transition: width 0.2s ease-in-out;
 	}
 
 	#menu li p{
 		opacity: 0;
-		transition: opacity .25s ease-out;
-		-webkit-transition: -webkit-opacity .25s ease-out;
+		-webkit-transition: -webkit-opacity 0.2s ease-out;
+		transition: opacity 0.2s ease-out;	
 	}
 
-	#menu:hover{
+	#menu:hover {
 		width: 240px;
 	}
 
@@ -686,7 +688,7 @@ footer{
 	}
 }
 
-@media only screen and (max-width: 768px) { /* Mobile Screen */
+@media only screen and (max-width: 620px) { /* Mobile Screen */
 
 	#page{
 		padding: 0;
@@ -725,18 +727,19 @@ footer{
 	}
 
 	.animating #page {
-	  transition: transform .25s ease-in-out;
-	  -webkit-transition: -webkit-transform .25s ease-in-out;
+		-webkit-transition: -webkit-transform .25s ease-in-out;
+		transition: transform .25s ease-in-out;
+	  
 	}
 
 	.animating.left #page {
-	  transform: translate3d( -240px, 0, 0 );
-	  -webkit-transform: translate3d( -240px, 0, 0 );
+		-webkit-transform: translate3d( -240px, 0, 0 );
+		transform: translate3d( -240px, 0, 0 );
 	}
 
 	.animating.right #page {
-	  transform: translate3d( 240px, 0, 0 );
-	  -webkit-transform: translate3d( 240px, 0, 0 );
+		-webkit-transform: translate3d( 240px, 0, 0 );
+		transform: translate3d( 240px, 0, 0 );
 	}
 
 	.menu-visible #page {

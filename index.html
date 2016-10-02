@@ -21,16 +21,101 @@
 		<div id="menu">
 			<ul>
 				<li onclick="buyCursor()">
-				<i>
-					<svg version="1.1" id="cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-					<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="15.151,7.382 35.613,26.735 27.389,27.199 
-						33.347,40.982 27.056,43.677 21.129,29.943 15.171,35.581 "/>
-					</svg>
-				</i>
-				<p>Курсоров:<span id="cursors">0</span></p>
-				<br />
-				<p class="costInfo">Стоимость:<span id="cursorCost">10</span></p>
+					<i>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+						<polygon fill="#111" points="16.453,10.005 33.363,25.997 26.567,26.382 31.49,37.771 26.291,39.998 21.394,28.649 16.47,33.308"/>
+						</svg>
+					</i>
+					<p>Курсоров: <span id="cursors">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="cursorCost">10</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Лопат: <span id="showel">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="showelCost">20</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Кирок: <span id="pick">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="pickCost">40</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Буров: <span id="drill">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="drillCost">80</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Инженеров: <span id="scv">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="scvCost">160</span></p>
+				</li>
+				<li onclick="">
+					<i>
+					</i>
+					<p>Харветсеров: <span id="harvester">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="harvesterCost">320</span></p>
+				</li>
+				<li onclick="">
+					<i>
+					</i>
+					<p>Шахт: <span id="mine">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="mineCost">640</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Цехи: <span id="freighter">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="freighterCost">1280</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Косм. Корабли: <span id="factory">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="factoryCost">2560</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Косм. Станции: <span id="rescollector">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="rescollectorCost">6120</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Дайсон Сферы: <span id="mrefinery">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="mrefineryCost">12240</span></p>
+				</li>
+				<li onclick="">
+					<i>
+
+					</i>
+					<p>Преоброзовтели Материи: <span id="deathstar">0</span></p>
+					<br />
+					<p class="costInfo">Стоимость: <span id="deathstarCost">24480</span></p>
 				</li>
 			</ul>
 		</div>
@@ -113,6 +198,9 @@
 		     $page.off( transitionEnd );
 		    } );
 		   } );
+
+		/*$( '#menu li' )*/
+
 		  } )( jQuery );
 	</script>
 </html>

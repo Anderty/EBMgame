@@ -55,6 +55,11 @@ function curCursorCost(){
 	document.getElementById("cursorCost").innerHTML = prettify(nextCost);
 };
 
+function curShowelCost(){
+	var nextCost = Math.floor(20 * Math.pow(1.1,data["cursors"]));
+	document.getElementById("cursorCost").innerHTML = prettify(nextCost);
+};
+
 function buyCursor(){
 	var cursorCost = Math.floor(10 * Math.pow(1.1,data["cursors"]));
 	if(data["minerals"] >= cursorCost){
