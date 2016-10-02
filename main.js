@@ -78,7 +78,7 @@ var data = {
 	"drillCost" : 80,
 	"engineer" : 0,
 	"engineerCost" : 160,
-	"harvester",
+	"harvester" : 0,
 	"harvesterCost" : 320,
 	"mine" : 0,
 	"mineCost" : 640,
