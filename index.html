@@ -21,18 +21,18 @@
 	<!--<div id="swipe"></div>-->
 		<div id="menu">
 			<ul>
-				<li onclick="buyCursor()">
+				<li onclick="buyItem('cursor')">
 					<i>
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
 						<polygon fill="#111" points="16.453,10.005 33.363,25.997 26.567,26.382 31.49,37.771 26.291,39.998 21.394,28.649 16.47,33.308"/>
 						</svg>
 					</i>
-					<p>Курсоров: <span id="cursors">0</span></p>
+					<p>Курсоров: <span id="cursor">0</span></p>
 					<br />
 					<p class="costInfo">Стоимость: <span id="cursorCost">10</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('showel')">
 					<i>
 
 					</i>
@@ -40,7 +40,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="showelCost">20</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('pick')">
 					<i>
 
 					</i>
@@ -48,7 +48,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="pickCost">40</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('drill')">
 					<i>
 
 					</i>
@@ -56,7 +56,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="drillCost">80</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('engineer')">
 					<i>
 
 					</i>
@@ -64,21 +64,21 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="engineerCost">160</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('harvester')">
 					<i>
 					</i>
 					<p>Харветсеров: <span id="harvester">0</span></p>
 					<br />
 					<p class="costInfo">Стоимость: <span id="harvesterCost">320</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('mine')">
 					<i>
 					</i>
 					<p>Шахт: <span id="mine">0</span></p>
 					<br />
 					<p class="costInfo">Стоимость: <span id="mineCost">640</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('factory')">
 					<i>
 
 					</i>
@@ -86,7 +86,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="factoryCost">1280</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('spaces')">
 					<i>
 
 					</i>
@@ -94,7 +94,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="spacesCost">2560</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('spacest')">
 					<i>
 
 					</i>
@@ -102,7 +102,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="spacestCost">5120</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('dyson')">
 					<i>
 
 					</i>
@@ -110,7 +110,7 @@
 					<br />
 					<p class="costInfo">Стоимость: <span id="dysonCost">10240</span></p>
 				</li>
-				<li onclick="">
+				<li onclick="buyItem('converter')">
 					<i>
 
 					</i>
@@ -165,7 +165,6 @@
 		</div>
 			
 		<footer>
-			<span id="version" class="link" onclick="">0.0.5 Open-Alpha</span>
 			<span id="delete" onclick="deleteSave()" class="link">Удалить Сохранение</span>
 		</footer>
 	</div>
